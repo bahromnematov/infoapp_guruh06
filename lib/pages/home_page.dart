@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:infoapp_guruh06/service/infoimages.dart';
 import 'package:infoapp_guruh06/service/infotext.dart';
-
+import 'package:share_plus/share_plus.dart';
 import 'details_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -36,7 +36,11 @@ class _HomePageState extends State<HomePage> {
           ),
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Share.share(
+                  'Visit FlutterCampus at https://www.fluttercampus.com',
+                );
+              },
               icon: Icon(Icons.share, color: Colors.white, size: 30),
             ),
             IconButton(
